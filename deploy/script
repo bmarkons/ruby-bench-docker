@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cd $HOME/ruby-bench-docker/
+git pull --rebase origin master
+
+cd $HOME/ruby-bench-docker/rails/master
+docker-compose build
+
+cd $HOME/ruby-bench-docker/sequel/master
+docker-compose build
+
+cd $HOME/ruby-bench-docker/pg/
+docker-compose build
